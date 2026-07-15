@@ -1,0 +1,6 @@
+{
+  "name": "Pocket Pet Oasis",
+  "description": "An adorable, interactive pocket pet companion game with personalized AI chat, feeding and play mechanics, daily affirmations, and mood tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

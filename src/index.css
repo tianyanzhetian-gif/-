@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Quicksand", "Fredoka", system-ui, -apple-system, sans-serif;
+  --font-display: "Fredoka", sans-serif;
+  --color-brand-pink: #ffb7c5;
+  --color-brand-peach: #ffd3b6;
+  --color-brand-yellow: #fffaaa;
+  --color-brand-green: #dcedc1;
+  --color-brand-purple: #e8d7f1;
+  --color-brand-blue: #c5ebf0;
+}
+
+/* Custom extra animations for kawaii effects */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes heart-pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.4) translateY(-30px);
+    opacity: 0;
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-slow-spin {
+  animation: slow-spin 20s linear infinite;
+}
+
+.heart-pop-particle {
+  position: absolute;
+  pointer-events: none;
+  animation: heart-pop 1s ease-out forwards;
+}
+
+/* Custom scrollbars for a clean, cute UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff5f6;
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffcbd1;
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffb7c5;
+}
+
+body {
+  background-color: #fff9fa;
+  color: #4a3e3d;
+  font-family: var(--font-sans);
+}
